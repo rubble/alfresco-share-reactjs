@@ -31,8 +31,8 @@ git clone https://github.com/rubble/alfresco-share-reactjs && cd alfresco-share-
 ```
 
 ... this may take a while! (It took 3-4 minutes on my 2014 MBP). What
-it will do is grab the dependencies for Alfresco, the build all the
-source files, place them in the `runner/` and startup Apache-Tomcat.
+it will do is grab all the dependencies for Alfresco, build all the
+source files, place them in the `runner/` and startup Apache-Tomcat and Solr.
 
 Once loaded, login at `127.0.0.1:8080/share` and use the default
 username/password `admin/admin`. Click on the dashboard cog, add the
