@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>React Widget</shortname>
+   <description>A dashlet running a ReactJS app</description>
+   <family>dashlet</family>
+   <url>/react-widget/dashlets/react</url>
+</webscript>
