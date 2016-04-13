@@ -1,0 +1,23 @@
+<extension>
+  <modules>
+    <module>
+      <id>ReactJS widgets</id>
+      <version>1.0</version>
+      <auto-deploy>true</auto-deploy>
+      <configurations>
+        <config evaluator="string-compare" condition="WebFramework" replace="false">
+          <web-framework>
+            <dojo-pages>
+              <packages>
+                <package name="react-dashlets" location="js/react-widget/dashlets" />
+                <package name="react-widgets" location="js/react-widget/dashlets/widgets" />
+                <package name="react" location="js/lib" main="react-with-addons.min"/>
+                <package name="react-dom" location="js/lib" main="react-dom.min"/>
+              </packages>
+            </dojo-pages>
+          </web-framework>
+        </config>
+      </configurations>
+    </module>
+  </modules>
+</extension>
