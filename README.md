@@ -34,6 +34,17 @@ git clone https://github.com/rubble/alfresco-share-reactjs && cd alfresco-share-
 it will do is grab the dependencies for Alfresco, the build all the
 source files, place them in the `runner/` and startup Apache-Tomcat.
 
+Once loaded, login at `127.0.0.1:8080/share` and use the default
+username/password `admin/admin`. Click on the dashboard cog, add the
+dashlet and you should see:
+
+![A screenshot of the dashboard with the React widget](./dashboard_screenshot.png)
+
+Inspiring? Well ... maybe not yet, but this is the first step in
+making an Aikau Widget using ReactJS! Let's see how far we get on the hackathon.
+
+# Developing
+
 The dashlet code follows the conventions for creating and authoring
 [Aikau Dashlets](http://docs.alfresco.com/5.1/concepts/dev-extensions-share-aikau-dashlets.html).
 The entry point for the react widget is located at:
