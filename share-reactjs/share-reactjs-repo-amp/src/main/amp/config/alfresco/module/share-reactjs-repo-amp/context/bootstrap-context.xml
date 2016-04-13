@@ -18,7 +18,8 @@
             </list>
         </property>
     </bean>
-	
 
+    <!-- workaround for running SpringLoaded -->
+    <bean id="unserializerValidatorBootstrap" abstract="true"/>
 
 </beans>
