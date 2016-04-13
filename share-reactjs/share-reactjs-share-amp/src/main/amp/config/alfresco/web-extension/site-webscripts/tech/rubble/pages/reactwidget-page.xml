@@ -1,0 +1,6 @@
+<webscript>
+    <shortname>ReactJS Widgets</shortname>
+    <description>A page that holds the ReactJS widgets</description>
+    <family>Share</family>
+    <url>/react-widget</url>
+</webscript>
