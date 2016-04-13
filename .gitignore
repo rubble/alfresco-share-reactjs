@@ -15,4 +15,8 @@ hs_err_pid*
 # intellij
 .idea/
 
+# alfresco
 target/
+alf_data_dev/
+*.log
+*.log.*
