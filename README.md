@@ -10,7 +10,7 @@ demoamp code for the application was removed.
 
 # Why?
 
-Modern web application development has turned to using
+Modern web application development have turned to using
 [JavaScript MVC](http://alistapart.com/article/javascript-mvc)
 frameworks to provide structure on top of vanilla JavaScript and
 provide useful features.
@@ -21,6 +21,8 @@ developer to re-use controller and model logic within a project such
 as Alfresco Community or make use of other controller and model
 libraries to suit their needs. A full feature list of ReactJS as well
 as further documentation [can be found here](https://facebook.github.io/react/).
+
+Heck, even Alfresco One wants to move to AngularJS at some point!
 
 # Getting started
 
@@ -53,5 +55,24 @@ The entry point for the react widget is located at:
 alfresco-share-widget-reactjs/share-reactjs/share-reactjs-share-amp/src/main/amp/web/js/react-widget/dashlets/widgets/ReactWidget.js
 ```
 
+The main guts of the program, however, are found in:
 
+`./JSX/JSXcomponents/`
 
+You'll need to _compile_ JSX into ES5 JavaScript to get it to work
+so:
+
+```bash
+cd JSX/
+npm install  # this grabs babel, babel-es5 and react
+babel --watch JSXComponents.jsx --out-file JSXComponents.js --presets react
+```
+
+_Then_ you'll need to symlink this into the `widgets` directory.
+ 
+```bash
+ln -s JSXcomponents.js /Users/emlyn/vidirepo/alfresco-share-widget-reactjs/share-reactjs/share-reactjs-share-amp/src/main/amp/web/js/react-widget/dashlets/widgets/JSXcomponents.jsx
+```
+
+Not particularly smooth, I know, but this was a hackathon project so 
+your lucky there is any documentation! Have fun!
