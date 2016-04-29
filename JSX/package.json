@@ -1,0 +1,17 @@
+{
+  "name": "jsx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
