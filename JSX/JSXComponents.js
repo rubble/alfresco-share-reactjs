@@ -244,7 +244,8 @@ define(['react'], function (React) {
                             )
                         )
                     )
-                )
+                ),
+                React.createElement(Timer, { start: new Date() })
             );
         }
     });

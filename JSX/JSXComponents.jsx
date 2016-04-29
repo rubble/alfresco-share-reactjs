@@ -174,6 +174,7 @@ define(['react'], function(React) {
                         </tr>
                     </tfoot>
                 </table>
+                <Timer start={new Date()} />
             </div>
             )
         }
