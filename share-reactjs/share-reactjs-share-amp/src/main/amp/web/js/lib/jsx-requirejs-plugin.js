@@ -31,13 +31,13 @@ define(['JSXTransformer', 'text'], function (JSXTransformer, text) {
         version: '0.6.2',
 
         load: function (name, req, onLoadNative, config) {
+            var jsxOptions = config.jsx || {};
+            var fileExtension = jsxOptions.fileExtension || '.js';
 
-            var jsxOptions = {
-                harmony: true,
-                stripTypes: true,
-                fileExtension: 'jsx'
+            var transformOptions = {
+                harmony: !!jsxOptions.harmony,
+                stripTypes: !!jsxOptions.stripTypes
             };
-
 
             var onLoad = function(content) {
                 try {
@@ -46,12 +46,12 @@ define(['JSXTransformer', 'text'], function (JSXTransformer, text) {
                     onLoadNative.error(err);
                 }
 
-                // if (config.isBuild) {
-                //     buildMap[name] = content;
-                // } else if (typeof location !== 'undefined') { // Do not create sourcemap when loaded in Node
-                //     content += '\n//# sourceURL=' + location.protocol + '//' + location.hostname +
-                //         config.baseUrl + name + jsxOptions.fileExtension;
-                // }
+                if (config.isBuild) {
+                    buildMap[name] = content;
+                } else if (typeof location !== 'undefined') { // Do not create sourcemap when loaded in Node
+                    content += '\n//# sourceURL=' + location.protocol + '//' + location.hostname +
+                        config.baseUrl + name + fileExtension;
+                }
 
                 onLoadNative.fromText(content);
             };
@@ -60,7 +60,7 @@ define(['JSXTransformer', 'text'], function (JSXTransformer, text) {
                 onLoadNative.error(err);
             };
 
-            text.load(name + jsxOptions.fileExtension, req, onLoad, jsxOptions);
+            text.load(name + fileExtension, req, onLoad, config);
         },
 
         write: function (pluginName, moduleName, write) {

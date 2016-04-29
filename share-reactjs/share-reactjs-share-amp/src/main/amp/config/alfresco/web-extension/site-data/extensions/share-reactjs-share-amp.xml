@@ -13,6 +13,9 @@
                 <package name="react-widgets" location="js/react-widget/dashlets/widgets" />
                 <package name="react" location="js/lib" main="react-with-addons.min"/>
                 <package name="react-dom" location="js/lib" main="react-dom.min"/>
+                <package name="jsx" location="js/lib" main="jsx"/>
+                <package name="text" location="js/lib" main="text"/>
+                <package name="JSXTransformer" location="js/lib" main="jsx-requirejs-plugin"/>
               </packages>
             </dojo-pages>
           </web-framework>
