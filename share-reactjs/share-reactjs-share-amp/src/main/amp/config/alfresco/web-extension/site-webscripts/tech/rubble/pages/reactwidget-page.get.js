@@ -6,17 +6,17 @@ model.jsonModel = {
             title: "ReactJS widget"
         }
     },
-        {
-            id: "REACTWIDGET_VERTICAL_LAYOUT",
-            name: "alfresco/layout/VerticalWidgets",
-            config: {
-                widgetWidth: 50,
-                widgets: [
-                    {
-                        id: "REACT_WIDGET",
-                        name: "react-widget/ReactWidget"
-                    }
-                ]
-            }
-        }]
+    {
+        id: "REACTWIDGET_VERTICAL_LAYOUT",
+        name: "alfresco/layout/VerticalWidgets",
+        config: {
+            widgetWidth: 50,
+            widgets: [
+                {
+                    id: "REACT_WIDGET",
+                    name: "react-widget/ReactWidget"
+                }
+            ]
+        }
+    }]
 };
