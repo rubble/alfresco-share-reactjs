@@ -42,8 +42,7 @@ dashlet and you should see:
 
 ![A screenshot of the dashboard with the React widget](./dashboard_screenshot.png)
 
-Inspiring? Well ... maybe not yet, but this is the first step in
-making an Aikau Widget using ReactJS! Let's see how far we get on the hackathon.
+Yay!
 
 # Developing
 
